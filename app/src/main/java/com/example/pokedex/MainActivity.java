@@ -21,9 +21,8 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         recyclerView = findViewById(R.id.Recycler_View);
-        adapter = new PokemonAdapter();
+        adapter = new PokedexAdapter(getApplicationContext());
         layoutManager = new LinearLayoutManager(this);
-
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(layoutManager);
     }
